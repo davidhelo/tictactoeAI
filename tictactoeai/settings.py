@@ -72,8 +72,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tictactoeai.wsgi.application'
+WSGI_APPLICATION = 'tictactoeai.wsgi.app'
 
+# WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
