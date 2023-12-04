@@ -18,6 +18,10 @@
       {
         "src": "/(.*)",
         "dest": "tictactoeai/wsgi.py"
+      },
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
       }
     ],
     "outputDirectory":"staticfiles"
