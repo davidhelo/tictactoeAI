@@ -18,12 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-# from tictactoeai.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('optimalmove/', include('optimalmove.urls')),
-    path('', include('tictactoegame.urls')),
+    path('tictactoegame/', include('tictactoegame.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
