@@ -1,7 +1,10 @@
 # Tic Tac Toe AI
+**You can see it and play against this tictactoe AI app [here](https://tictactoe-ai-davidhelo.vercel.app/tictactoegame/).**
+
  ## Description
  ### Adversarial Search: minimax algorithm
- This app is an implementation in Python of an adversarial search algorithm, concretely, the minimax algorithm to play tic tac toe game.
+ This app is an implementation in Python of an adversarial search algorithm, concretely, the minimax algorithm to play tic tac toe game. 
+ A correct implementation means that you won't be able to win against it.
 
  The minimax function is in the [tictactoeGame.py](https://github.com/davidhelo/tictactoeAI/blob/main/optimalmove/tictactoeGame.py) file. 
 
@@ -11,7 +14,7 @@
  These two functions call each other recursively until there is a terminal board (which mean there is a winner or a tie), at that point a score is assign: 1 if maximizer wins, -1 if minimizer wins or 0 if it is a tie, weighted by the depth of the path. 
 
  Find more information about Adversarial Search and Minimax algorithms in this lecture from Harvard course cs50ai [here](https://cs50.harvard.edu/ai/2023/notes/0/#adversarial-search),
- or more information [here](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/).
+ or more information from geeks for geeks [here](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/).
 
  ## Web App
  The web app was developed in React JS and Python Django Framework. It was pre-build to be served as a static HTML file and then injects the javascript to the index template.
