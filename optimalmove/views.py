@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
 from . import tictactoeGame
-import json
+import random
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -11,11 +11,15 @@ def optimalMove(request):
     Response next player optimal action and board received
     Gets in the request a "board":[]
     return {"NextPlayer": nextPlayer, "optimalAction": optimalAction, "board": board}
+    if board is empty, it returns a random cell to add variation to start and save time
     '''
     if request.method == "POST":
         message = "post request"
         board = request.data['board']
-        optimalAction = tictactoeGame.minimax(board)
+        if len(tictactoeGame.actions(board)) == 9:
+            optimalAction = (random.randint(0, 2), random.randint(0, 2))
+        else:
+            optimalAction = tictactoeGame.minimax(board)
         nextPlayer = tictactoeGame.player(board)
         newBoard = board.copy()
         if optimalAction is not None:
